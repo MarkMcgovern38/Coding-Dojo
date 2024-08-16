@@ -1,0 +1,35 @@
+{% extends "base_template.html" %}
+
+{% block title %} Add Ninja {% endblock %}
+
+{% block content %}
+
+    <form action="/Ninja/add" method="POST">
+        <div class="form-group">
+            <label>First Name:</label>
+            <input type="text" name="first_name" class="form-control" placeholder="First Name">
+        </div>
+        <div class="form-group">
+            <label>Last Name:</label>
+            <input type="text" name="last_name" class="form-control" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <label>Age:</label>
+            <input type="number" name="age" class="form-control" placeholder="Age">
+        </div>
+    
+        <div>
+            <label>Dojo:</label>
+            <select class="form-control" name="dojo_id">
+                {% for dojo in dojos %}
+                <option value="{{dojo.id}}">{{dojo.name}}</option>
+                {% endfor %}
+            </select>
+
+    
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+
+{% endblock %}

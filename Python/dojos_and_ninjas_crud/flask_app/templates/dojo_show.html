@@ -1,0 +1,38 @@
+{% extends "base_template.html" %}
+
+{% block title %} Show Dojo {% endblock %}
+
+{% block content %}
+
+{% for dojo in dojo %}
+<h1>{{dojo.name}} Ninjas</h1>
+{% endfor %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dojo in dojos %}
+            <tr>
+                <th scope="row">{{dojo.ninjas.id}}</th>
+                <td>{{dojo.ninjas.first_name}}</td>
+                <td>{{dojo.ninjas.last_name}}</td>
+                <td>{{dojo.ninjas.age}}</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    <a class="btn-primary" href="/Dojo">Home</a>
+{% endblock %}
+
+
+
+
+
