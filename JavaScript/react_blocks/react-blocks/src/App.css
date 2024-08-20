@@ -1,0 +1,13 @@
+.container{
+  background-color: #dddddd;
+  height: auto;
+  width: auto;
+  padding: 10px;
+  margin: 10px;
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+}
+.flex{
+  display: flex;
+}

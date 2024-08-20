@@ -1,0 +1,8 @@
+.yellow {
+    background-color: #ffd966;
+    width: 200px;
+    height: 220px;
+    margin: 10px;
+    border-color: black;
+    border-style: solid;
+}
